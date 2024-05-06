@@ -1,9 +1,25 @@
-import { Container, VStack, Heading, Text, Link, Image, Button } from "@chakra-ui/react";
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { Container, VStack, Heading, Text, Link, Image, Button, Box, Flex, Spacer } from "@chakra-ui/react";
+import { FaLinkedin, FaGithub, FaEnvelope, FaHome } from "react-icons/fa";
+
+const Header = () => {
+  return (
+    <Flex bg="gray.100" w="100%" p={4} color="black">
+      <Box p="2">
+        <Link href="/">
+          <Button leftIcon={<FaHome />} colorScheme="teal" variant="solid">
+            Home
+          </Button>
+        </Link>
+      </Box>
+      <Spacer />
+    </Flex>
+  );
+};
 
 const Index = () => {
   return (
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
+      <Header />
       <VStack spacing={8}>
         <Image borderRadius="full" boxSize="150px" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBwb3J0cmFpdHxlbnwwfHx8fDE3MTUwMDgwMTZ8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Profile Picture" />
         <Heading as="h1" size="xl">
